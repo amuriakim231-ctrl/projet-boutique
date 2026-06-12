@@ -1,0 +1,519 @@
+/* Variables de couleurs - Thème VVIP Noir & Or */
+:root {
+    --bg-color: #0b0b0b;
+    --bg-card: #141414;
+    --text-main: #ffffff;
+    --text-muted: #aaaaaa;
+    --gold: #d4af37;
+    --gold-hover: #f3e5ab;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Ajout d'une ombre subtile au texte */
+}
+
+/* Navigation haut de gamme */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(11, 11, 11, 0.95);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    z-index: 1000;
+    padding: 20px 5%;
+    display: flex;
+    backdrop-filter: blur(8px); /* Effet de verre dépoli */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Ombre subtile */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-main);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--gold);
+    transform: translateY(-2px); /* Léger déplacement vers le haut */
+    text-shadow: 0 0 8px var(--gold); /* Effet lumineux au survol */
+}
+
+/* Section Héro (Accueil) */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    /* Remplacement de l'image de fond par une plus pertinente */
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('vvip.png') no-repeat center center/cover;
+}
+
+.hero h1 {
+    font-size: 4.5rem; /* Taille de police plus grande */
+    margin-bottom: 10px;
+    font-weight: 600; /* Poids de police plus prononcé */
+}
+
+.hero p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--gold); 
+    margin-bottom: 40px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); /* Ombre pour le texte du slogan */
+}
+
+/* Boutons Chics */
+.btn-gold {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: transparent;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    transition: all 0.4s ease;
+    border-radius: 3px; /* Bords légèrement arrondis */
+}
+
+.btn-gold:hover {
+    background-color: var(--gold);
+    color: #000;
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.6); /* Ombre plus prononcée */
+    transform: translateY(-3px); /* Effet de "flottement" */
+}
+
+.btn-small {
+    padding: 10px 20px;
+    font-size: 0.75rem;
+}
+
+/* Sections Générales */
+section {
+    padding: 100px 10%;
+}
+
+.section-title {
+    text-align: center; 
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px; /* Ligne plus épaisse */
+    background-color: var(--gold);
+    margin: 15px auto 0;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 60px;
+    font-size: 1rem;
+}
+
+/* Section Concept */
+.concept-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.concept-text {
+    flex: 1;
+}
+
+.concept-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.concept-text p {
+    margin-bottom: 30px;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.concept-video-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 420px;
+}
+.concept-slider {
+    width: 100%;
+    max-width: 640px;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Style pour l'image unique fixe */
+.concept-slide-unique {
+    width: 100%;
+    height: 100%;
+    background-size: cover; /* Remplit magnifiquement tout le cadre */
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.5s ease; /* Permet un petit effet de zoom au survol */
+}
+
+/* Optionnel : Un léger zoom élégant quand le client passe sa souris sur la photo */
+.concept-slider:hover .concept-slide-unique {
+    transform: scale(1.03);
+}
+
+
+.concept-slide {
+    min-width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@keyframes concept-scroll {
+    0%, 9% { transform: translateX(0); }
+    11%, 20% { transform: translateX(-100%); }
+    22%, 31% { transform: translateX(-200%); }
+    33%, 42% { transform: translateX(-300%); }
+    44%, 53% { transform: translateX(-400%); }
+    55%, 64% { transform: translateX(-500%); }
+    66%, 75% { transform: translateX(-600%); }
+    77%, 86% { transform: translateX(-700%); }
+    88%, 100% { transform: translateX(-800%); }
+}
+
+/* Section Catalogue Lookbook */
+.grid-catalogue {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.item-catalogue {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 5px; /* Bords arrondis */
+    overflow: hidden;
+    transition: transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Ombre par défaut */
+}
+
+.item-catalogue:hover {
+    transform: translateY(-8px); /* Effet de "flottement" plus prononcé */
+    border-color: rgba(212, 175, 55, 0.3);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); /* Ombre plus intense au survol */
+}
+
+.item-img {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    cursor: zoom-in; /* Indique visuellement que c'est cliquable */
+    border-radius: 5px 5px 0 0; /* Bords supérieurs arrondis */
+}
+
+/* Galerie Défilante (Slider Infini) */
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 40px 0;
+    position: relative;
+    display: flex; /* Permet d'aligner les pistes de défilement */
+    flex-direction: column; /* Les pistes seront empilées verticalement */
+    gap: 30px; /* Espace entre les deux pistes */
+    background: linear-gradient(to right, rgba(11, 11, 11, 0.9), rgba(255, 255, 255, 0.02), rgba(11, 11, 11, 0.9)); /* Fond avec dégradé pour les bords */
+    /* Masque pour créer un effet de fondu sur les bords du slider */
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.slider-track {
+    display: flex;
+    width: calc(300px * 10); /* 300px (largeur + marge) * nombre total d'images par piste */
+}
+
+.slider-img {
+    width: 250px;
+    height: 350px;
+    flex-shrink: 0;
+    margin: 0 25px; 
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 5px; /* Bords arrondis */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Ombre pour chaque image */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Transition plus douce */
+}
+
+.slider-img:hover {
+    transform: scale(1.05); /* Zoom léger au survol */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7); /* Ombre plus intense */
+}
+
+/* Animation pour la première piste (gauche à droite) */
+.slider-track-1 {
+    animation: scroll-left 120s linear infinite; /* Augmentation de la durée pour un défilement plus lent */
+}
+
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-300px * 5)); } /* On décale de la moitié du total */
+}
+
+/* Animation pour la deuxième piste (droite à gauche) */
+.slider-track-2 {
+    animation: scroll-right 120s linear infinite; /* Augmentation de la durée pour un défilement plus lent */
+}
+
+@keyframes scroll-right {
+    0% { transform: translateX(calc(-300px * 5)); } /* Commence décalé pour un effet continu */
+    100% { transform: translateX(0); } /* Revient à la position initiale */
+}
+
+/* Arrêt du défilement au survol pour les deux pistes */
+.slider-container:hover .slider-track-1 {
+    animation-play-state: paused; /* Arrête le scroll quand on survole */
+}
+
+.slider-container:hover .slider-track-2 {
+    animation-play-state: paused; /* Arrête le scroll quand on survole */
+}
+
+.item-info {
+    padding: 25px;
+    text-align: center;
+}
+
+.item-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+/* Section Showroom Privé */
+.showroom {
+    background-color: var(--bg-card);
+}
+
+.showroom .section-subtitle {
+    margin-bottom: 20px;
+}
+
+.privileges {
+    list-style: none;
+    max-width: 600px;
+    margin: 40px auto 0;
+}
+
+.privileges li {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    align-items: center;
+}
+
+.privileges li::before {
+    content: "✦"; 
+    color: var(--gold);
+    margin-right: 15px;
+    font-size: 1.2rem; /* Taille de l'icône */
+    transform: translateY(2px); /* Alignement vertical */
+}
+
+/* Section Contact & Accès */ 
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    margin-bottom: 40px;
+}
+
+.contact-info p {
+    margin: 15px 0;
+    font-size: 1.1rem;
+}
+
+#map {
+    width: 100%;
+    height: 360px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.gold-text {
+    color: var(--gold);
+    font-weight: 500;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    font-size: 2rem;
+}
+
+.social-links a {
+    color: var(--gold);
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--text-main);
+    transform: translateY(-3px) scale(1.1);
+}
+
+footer {
+    text-align: center;
+    padding: 50px; /* Augmentation du padding */
+    font-size: 0.9rem; /* Taille de police légèrement plus grande */
+    color: var(--text-muted);
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Responsivité Mobile */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+    nav {
+        margin-top: 15px;
+    }
+    nav a {
+        margin: 0 10px;
+        font-size: 0.8rem;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .concept-content {
+        flex-direction: column;
+    }
+    .concept-video-container {
+        width: 100%;
+        height: 300px; /* Adjusted height for smaller screens */
+    }
+    section {
+        padding: 70px 5%;
+    }
+}
+/* --- STYLES AJOUTÉS POUR LE JAVASCRIPT --- */
+
+
+/* Préparation de l'animation de fondu */
+section.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Déclenchement de l'animation par le JS */
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Conteneur plein écran pour la galerie zoomée */
+#lightbox {
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+#lightbox.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+    transform: scale(0.9);
+    transition: transform 0.4s ease;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2100;
+    transition: color 0.3s;
+}
+
+#lightbox.active img {
+    transform: scale(1);
+}
