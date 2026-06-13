@@ -302,7 +302,7 @@ section {
 
 /* Animation pour la première piste (gauche à droite) */
 .slider-track-1 {
-    animation: scroll-left 120s linear infinite; /* Augmentation de la durée pour un défilement plus lent */
+    animation: scroll-left 49s linear infinite; /* Augmentation de la durée pour un défilement plus lent */
 }
 
 @keyframes scroll-left {
@@ -312,7 +312,7 @@ section {
 
 /* Animation pour la deuxième piste (droite à gauche) */
 .slider-track-2 {
-    animation: scroll-right 120s linear infinite; /* Augmentation de la durée pour un défilement plus lent */
+    animation: scroll-right 49s linear infinite; /* Augmentation de la durée pour un défilement plus lent */
 }
 
 @keyframes scroll-right {
